@@ -1,0 +1,31 @@
+{
+  "name": "blockly-rml-server",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "node ./dist/index.js 7070"
+  },
+  "dependencies": {
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.1",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa-router": "^7.4.1",
+    "@types/koa-static": "^4.0.1",
+    "@types/node": "^14.14.7",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
+  }
+}
