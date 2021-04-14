@@ -6,13 +6,18 @@ import logger from 'koa-logger';
 import serve from 'koa-static';
 import path from 'path';
 import { staticDir } from './config';
+import apiRouter from './rml-processor';
 
 const staticServe = serve(staticDir);
 
 const app = new Koa();
 
-app.use(logger());
-app.use(bodyParser());
+app
+  .use(logger())
+  .use(bodyParser())
+  .use(apiRouter.routes())
+  .use(apiRouter.allowedMethods());
+
 app.use(async (ctx, next) => {
   const targetPath = path.resolve(staticDir, `./${ctx.path}`);
   try {
