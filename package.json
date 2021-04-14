@@ -8,17 +8,20 @@
     "serve": "node ./dist/index.js 7070"
   },
   "dependencies": {
+    "@rmlio/rmlmapper-java-wrapper": "^1.1.1",
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
     "koa-logger": "^3.2.1",
     "koa-router": "^10.0.0",
-    "koa-static": "^5.0.0"
+    "koa-static": "^5.0.0",
+    "n3": "^1.9.0"
   },
   "devDependencies": {
     "@types/koa": "^2.13.1",
     "@types/koa-logger": "^3.1.1",
     "@types/koa-router": "^7.4.1",
     "@types/koa-static": "^4.0.1",
+    "@types/n3": "^1.8.0",
     "@types/node": "^14.14.7",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
