@@ -1,20 +1,20 @@
+import { constants } from 'fs';
+import fs from 'fs/promises';
 import Koa from 'koa';
 import bodyParser from 'koa-body';
 import logger from 'koa-logger';
 import serve from 'koa-static';
-import fs from 'fs/promises';
-import { constants } from 'fs';
 import path from 'path';
+import { staticDir } from './config';
 
-const staticPath = path.resolve(__dirname, '../build');
-const staticServe = serve(staticPath);
+const staticServe = serve(staticDir);
 
 const app = new Koa();
 
 app.use(logger());
 app.use(bodyParser());
 app.use(async (ctx, next) => {
-  const targetPath = path.resolve(staticPath, `./${ctx.path}`);
+  const targetPath = path.resolve(staticDir, `./${ctx.path}`);
   try {
     // 检查路径是否存在
     await fs.access(targetPath, constants.R_OK);
