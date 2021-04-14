@@ -25,6 +25,10 @@ app.use(async (ctx, next) => {
   await staticServe(ctx, next);
 });
 
+app.onerror = error => {
+  console.error(`Server error: ${error}`);
+};
+
 const port = Number.parseInt(process.argv[2]);
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}\n`);
