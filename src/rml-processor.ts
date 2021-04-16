@@ -53,7 +53,7 @@ const router = new Router().post('/execute', async ctx => {
     const result = await rmlmapper.execute(rml, options);
     ctx.response.body = JSON.stringify(result);
   } catch (error) {
-    ctx.throw(500, error.message);
+    ctx.throw(400, error);
   }
 });
 
