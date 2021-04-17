@@ -26,8 +26,8 @@ interface OptionWithSerialization extends BasicOptions {
 export type RMLExecutorOptions = OptionWithAsQuad | OptionWithSerialization;
 
 export interface RMLExecutorResult {
-  output: string | N3.Quad;
-  metadata: string | N3.Quad;
+  output: string | N3.Quad[];
+  metadata: string | N3.Quad[];
 }
 
 declare class RMLMapperWrapper {
