@@ -2,6 +2,7 @@ import { constants } from 'fs';
 import fs from 'fs/promises';
 import Koa from 'koa';
 import bodyParser from 'koa-body';
+import compress from 'koa-compress';
 import logger from 'koa-logger';
 import serve from 'koa-static';
 import path from 'path';
@@ -15,6 +16,7 @@ const app = new Koa();
 app
   .use(logger())
   .use(bodyParser())
+  .use(compress({ threshold: 2048, br: false }))
   .use(apiRouter.routes())
   .use(apiRouter.allowedMethods());
 

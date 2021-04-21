@@ -159,6 +159,14 @@
   dependencies:
     "@types/koa" "*"
 
+"@types/koa-compress@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.npm.taobao.org/@types/koa-compress/download/@types/koa-compress-4.0.1.tgz#3afde230ebfe3e7ef8719911f9a58309ca3a32e5"
+  integrity sha1-Ov3iMOv+Pn74cZkR+aWDCco6MuU=
+  dependencies:
+    "@types/koa" "*"
+    "@types/node" "*"
+
 "@types/koa-logger@^3.1.1":
   version "3.1.1"
   resolved "https://registry.npm.taobao.org/@types/koa-logger/download/@types/koa-logger-3.1.1.tgz#bf759ba2f25b7562ffa30b09616bb1c1e5070fea"
@@ -419,7 +427,7 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-bytes@3.1.0, bytes@^3.1.0:
+bytes@3.1.0, bytes@^3.0.0, bytes@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npm.taobao.org/bytes/download/bytes-3.1.0.tgz#f6cf7933a360e0588fa9fde85651cdc7f805d1f6"
   integrity sha1-9s95M6Ng4FiPqf3oVlHNx/gF0fY=
@@ -500,6 +508,13 @@ color-name@~1.1.4:
   version "1.1.4"
   resolved "https://registry.npm.taobao.org/color-name/download/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha1-wqCah6y95pVD3m9j+jmVyCbFNqI=
+
+compressible@^2.0.0:
+  version "2.0.18"
+  resolved "https://registry.npm.taobao.org/compressible/download/compressible-2.0.18.tgz#af53cca6b070d4c3c0750fbd77286a6d7cc46fba"
+  integrity sha1-r1PMprBw1MPAdQ+9dyhqbXzEb7o=
+  dependencies:
+    mime-db ">= 1.43.0 < 2"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -1159,6 +1174,17 @@ koa-compose@^4.1.0:
   resolved "https://registry.npm.taobao.org/koa-compose/download/koa-compose-4.1.0.tgz#507306b9371901db41121c812e923d0d67d3e877"
   integrity sha1-UHMGuTcZAdtBEhyBLpI9DWfT6Hc=
 
+koa-compress@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npm.taobao.org/koa-compress/download/koa-compress-5.0.1.tgz#9e89e2847998f8f9f73a5674e5739a2f4b6531fc"
+  integrity sha1-nonihHmY+Pn3OlZ05XOaL0tlMfw=
+  dependencies:
+    bytes "^3.0.0"
+    compressible "^2.0.0"
+    http-errors "^1.7.3"
+    koa-is-json "^1.0.0"
+    statuses "^2.0.0"
+
 koa-convert@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npm.taobao.org/koa-convert/download/koa-convert-1.2.0.tgz#da40875df49de0539098d1700b50820cebcd21d0"
@@ -1166,6 +1192,11 @@ koa-convert@^1.2.0:
   dependencies:
     co "^4.6.0"
     koa-compose "^3.0.0"
+
+koa-is-json@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/koa-is-json/download/koa-is-json-1.0.0.tgz#273c07edcdcb8df6a2c1ab7d59ee76491451ec14"
+  integrity sha1-JzwH7c3Ljfaiwat9We52SRRR7BQ=
 
 koa-logger@^3.2.1:
   version "3.2.1"
@@ -1297,7 +1328,7 @@ micromatch@^4.0.2:
     braces "^3.0.1"
     picomatch "^2.2.3"
 
-mime-db@1.47.0:
+mime-db@1.47.0, "mime-db@>= 1.43.0 < 2":
   version "1.47.0"
   resolved "https://registry.npm.taobao.org/mime-db/download/mime-db-1.47.0.tgz?cache=0&sync_timestamp=1617306025156&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmime-db%2Fdownload%2Fmime-db-1.47.0.tgz#8cb313e59965d3c05cfbf898915a267af46a335c"
   integrity sha1-jLMT5Zll08Bc+/iYkVomevRqM1w=
@@ -1644,6 +1675,11 @@ sprintf-js@~1.0.2:
   version "1.5.0"
   resolved "https://registry.npm.taobao.org/statuses/download/statuses-1.5.0.tgz?cache=0&sync_timestamp=1609654065358&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fstatuses%2Fdownload%2Fstatuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+
+statuses@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/statuses/download/statuses-2.0.1.tgz?cache=0&sync_timestamp=1609654065358&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fstatuses%2Fdownload%2Fstatuses-2.0.1.tgz#55cb000ccf1d48728bd23c685a063998cf1a1b63"
+  integrity sha1-VcsADM8dSHKL0jxoWgY5mM8aG2M=
 
 string-width@^4.2.0:
   version "4.2.2"
