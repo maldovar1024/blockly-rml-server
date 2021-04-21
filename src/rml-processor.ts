@@ -45,13 +45,13 @@ function checkRMLRequestBody(body: any): boolean {
 const router = new Router().post('/execute', async ctx => {
   const { body } = ctx.request;
   if (!checkRMLRequestBody(body)) {
-    ctx.throw(400);
+    ctx.throw(400, new Error('Invalid arguments'));
   }
 
   const { rml, ...options } = <RMLMapperBody>body;
   try {
     const result = await rmlmapper.execute(rml, options);
-    ctx.response.body = JSON.stringify(result);
+    ctx.response.body = JSON.stringify(result.output);
   } catch (error) {
     ctx.throw(400, error);
   }
